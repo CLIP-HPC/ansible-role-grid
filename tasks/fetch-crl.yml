@@ -13,3 +13,14 @@
   command: /usr/sbin/fetch-crl
   changed_when: false
   ignore_errors: true
+
+- name: Enable fetch-crl systemd boot service
+  service:
+    name: fetch-crl-boot
+    enabled: true
+
+- name: Enable fetch-crl systemd cron job
+  service:
+    name: fetch-crl-cron
+    enabled: true
+    state: started

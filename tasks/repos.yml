@@ -3,6 +3,7 @@
   package:
     name: yum-priorities
     state: present
+  ignore_errors: true
 
 - name: Install UMD base repository
   yum_repository:

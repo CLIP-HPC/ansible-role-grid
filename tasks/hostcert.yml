@@ -3,6 +3,7 @@
   copy:
     src: "{{ grid_host_certificate.cert }}"
     dest: "{{ grid_security_dir }}/hostcert.pem"
+    remote_src: "{{ grid_host_certificate.remote_src }}"
     mode: 0644
 
 - name: Install host private key
@@ -10,3 +11,4 @@
     src: "{{ grid_host_certificate.key }}"
     dest: "{{ grid_security_dir }}/hostkey.pem"
     mode: 0400
+    remote_src: "{{ grid_host_certificate.remote_src }}"
